@@ -1,26 +1,269 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Theme is driven by an explicit `light` or `dark` class on <html>, written
+   before first paint by the inline script in app/layout.tsx. Dark is the
+   `:root` default so the signature look survives a no-JS visit. */
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ShotScript brand system.
+   Colours sampled straight from the assets in /public: deep violet #5B21B6 from
+   the app badge, accent violet #7B3AEC from the in-app buttons, gold #FBBF24
+   from the badge ring, and mint #10B982 from the positive stat in the app.
+   These are fixed hues — they read the same in both themes. */
+@theme {
+  --color-brand-50: #f5efff;
+  --color-brand-100: #ebdeff;
+  --color-brand-200: #d6bcff;
+  --color-brand-300: #b892fb;
+  --color-brand-400: #9a66f6;
+  --color-brand-500: #7b3aec;
+  --color-brand-600: #6826d5;
+  --color-brand-700: #5b21b6;
+  --color-brand-800: #45188a;
+  --color-brand-900: #2d1059;
+  --color-brand-950: #17082f;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f19e10;
+  --color-gold-600: #c2740a;
+
+  --color-mint-400: #34d9a0;
+  --color-mint-500: #10b982;
+
+  /* Night scale. Used for the bands that stay dark in both themes. */
+  --color-ink-800: #171226;
+  --color-ink-850: #120e1e;
+  --color-ink-900: #0d0a16;
+  --color-ink-950: #08060f;
+  --color-ink-975: #050409;
+
+  --animate-marquee: marquee 46s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  /* Direction-aware slide for the testimonial carousel. The element is keyed
+     on the active index so React remounts it and the animation replays. */
+  --animate-slide-in-right: slide-in-right 0.5s cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+  --animate-slide-in-left: slide-in-left 0.5s cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+  --animate-rise: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(2.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-2.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(1.25rem) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---------------------------------------------------------------------------
+   Semantic tokens. Components only ever reference these, so a theme swap is
+   a variable swap — no `dark:` duplication on every colour utility.
+   `fg` doubles as the opacity ladder (text-fg/65, bg-fg/6, …): near-white in
+   dark, near-black in light, so every step inverts correctly.
+   --------------------------------------------------------------------------- */
+:root {
+  color-scheme: dark;
+
+  --canvas: #050409;
+  --canvas-2: #08060f;
+  --canvas-3: #0d0a16;
+
+  --fg: #ffffff;
+  --body: #ece8f7;
+  --line: rgb(255 255 255 / 0.08);
+
+  --accent: #b892fb;
+  --gold-ink: #fbbf24;
+  --mint-ink: #10b982;
+
+  --panel-a: rgb(255 255 255 / 0.055);
+  --panel-b: rgb(255 255 255 / 0.018);
+  --panel-shadow: inset 0 1px 0 0 rgb(255 255 255 / 0.06);
+  --grid: rgb(255 255 255 / 0.04);
+}
+
+/* Light theme: white page, lavender-tinted bands, violet ink — the palette
+   the marketing mock uses. Violet and gold are darkened here so they still
+   pass as text colours on white. */
+.light {
+  color-scheme: light;
+
+  --canvas: #ffffff;
+  --canvas-2: #f7f5fc;
+  --canvas-3: #efeaf9;
+
+  --fg: #15111f;
+  --body: #4a4459;
+  --line: rgb(21 17 31 / 0.1);
+
+  --accent: #6826d5;
+  --gold-ink: #a9700a;
+  --mint-ink: #0a8f63;
+
+  --panel-a: #ffffff;
+  --panel-b: #fbfaff;
+  --panel-shadow: 0 1px 2px 0 rgb(21 17 31 / 0.05);
+  --grid: rgb(21 17 31 / 0.045);
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-canvas-2: var(--canvas-2);
+  --color-canvas-3: var(--canvas-3);
+  --color-fg: var(--fg);
+  --color-body: var(--body);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-gold-ink: var(--gold-ink);
+  --color-mint-ink: var(--mint-ink);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-inter), sans-serif;
+  --font-accent: var(--font-instrument), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Clears the sticky header when jumping to an anchor. */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--body);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-500);
+    color: #fff;
+  }
+
+  /* brand-500 rather than a tint — it holds up on both canvases. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Panel used for every card on the page: a hairline edge, a faint vertical
+   wash, and a lift that reads as an inset highlight in dark, a drop shadow
+   in light. */
+@utility surface {
+  border: 1px solid var(--line);
+  background-image: linear-gradient(180deg, var(--panel-a), var(--panel-b));
+  box-shadow: var(--panel-shadow);
+}
+
+@utility hairline {
+  border: 1px solid var(--line);
+}
+
+/* Headline highlight: white into violet into the badge gold. Only ever sits
+   on the always-dark bands, so it keeps the dark-theme ramp in both themes. */
+@utility text-shine {
+  background-image: linear-gradient(
+    100deg,
+    #ffffff 0%,
+    #d6bcff 42%,
+    #fbbf24 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+/* Faint blueprint grid, faded out towards the bottom of its container. */
+@utility blueprint {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: radial-gradient(75% 65% at 50% 0%, #000 0%, transparent 78%);
+}
+
+/* Blueprint grid for the bands that stay dark in both themes. */
+@utility blueprint-dark {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: radial-gradient(75% 65% at 50% 0%, #000 0%, transparent 78%);
+}
+
+/* Edge-fades a horizontally scrolling strip. */
+@utility fade-x {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
 }
