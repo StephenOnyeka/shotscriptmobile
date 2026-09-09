@@ -124,10 +124,10 @@ export default function SupportPage() {
                 // className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
                 className="aspect-6/5 w-full object-contain transition duration-700 group-hover:scale-105"
               />
-              <div
+              {/* <div
                 aria-hidden
                 className="absolute inset-0 bg-linear-to-t from-ink-950 via-ink-950/25 to-transparent"
-              />
+              /> */}
             </div>
 
             <div className="surface absolute -bottom-5 left-4 right-4 rounded-2xl px-5 py-4 backdrop-blur-md sm:left-6 sm:right-auto">

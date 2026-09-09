@@ -171,6 +171,7 @@
     scroll-behavior: smooth;
     /* Clears the sticky header when jumping to an anchor. */
     scroll-padding-top: 5.5rem;
+    overflow-x: hidden;
   }
 
   body {

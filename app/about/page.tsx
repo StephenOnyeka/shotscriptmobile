@@ -168,7 +168,7 @@ export default function AboutPage() {
             </div>
           </div> */}
           <div className="animate-rise mx-auto w-full max-w-md gap-4 lg:max-w-none">
-            <div className="bg-[#b892fb] pt-16 px-8 w-[500] h-auto relative overflow-hidden rounded-4xl">
+            <div className="bg-[#b892fb] pt-16 px-8 w-full max-w-[500px] mx-auto h-auto relative overflow-hidden rounded-4xl">
                           <Image
                             // src={unsplash(photos.support, 900, 760)}
                             // src="/social-media-marketing-concept-marketing-with-applications.jpg"
