@@ -23,20 +23,28 @@ export function Logo({
         alt=""
         width={badge}
         height={badge}
-        className="rounded-[28%] shadow-[0_6px_20px_-6px_rgba(123,58,236,0.9)]"
+        // className="dark:hidden"
         priority
       />
+      {/* <Image
+        src={screens.badgeDark}
+        alt=""
+        width={badge}
+        height={badge}
+        className="light:hidden"
+        priority
+      /> */}
       <span className="flex flex-col leading-none">
         <span
-          className={`font-display font-extrabold tracking-[-0.03em] text-fg ${word}`}
+          className={`font-display font-medium tracking-[-0.03em] text-fg ${word}`}
         >
           ShotScript
         </span>
-        {kicker && (
+        {/* {kicker && (
           <span className="mt-1 text-[0.5rem] font-semibold uppercase tracking-[0.42em] text-accent/55">
             Studio Pro
           </span>
-        )}
+        )} */}
       </span>
     </span>
   );

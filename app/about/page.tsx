@@ -124,7 +124,7 @@ export default function AboutPage() {
         <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           {/* 3:2 columns so the tall tile lands on a portrait ratio: two square
               tiles set the row heights, the spanning tile stretches over both. */}
-          <div className="animate-rise mx-auto grid w-full max-w-md grid-cols-5 gap-4 lg:max-w-none">
+          {/* <div className="animate-rise mx-auto grid w-full max-w-md grid-cols-5 gap-4 lg:max-w-none">
             <div className="hairline relative col-span-3 row-span-2 overflow-hidden rounded-3xl bg-fg/5">
               <Image
                 src={unsplash(photos.mission, 720, 1000, "faces")}
@@ -152,6 +152,25 @@ export default function AboutPage() {
                 className="object-cover"
               />
             </div>
+          </div> */}
+          <div className="animate-rise mx-auto w-full max-w-md gap-4 lg:max-w-none">
+            <div className=" relative overflow-hidden rounded-4xl">
+                          <Image
+                            // src={unsplash(photos.support, 900, 760)}
+                            // src="/social-media-marketing-concept-marketing-with-applications.jpg"
+                            src="/portrait-overjoyed-women-friends-holding-mobile-phone-shopping-online-with-sales_695242-10022-removebg-preview.png"
+                            alt=""
+                            width={450}
+                            height={380}
+                            priority
+                            // className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
+                            className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
+                          />
+                          <div
+                            aria-hidden
+                            className="absolute inset-0 bg-linear-to-t from-ink-950 via-ink-950/25 to-transparent"
+                          />
+                        </div>
           </div>
 
           <div className="flex flex-col items-start gap-7">

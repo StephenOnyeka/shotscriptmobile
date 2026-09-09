@@ -112,14 +112,17 @@ export default function SupportPage() {
           {/* Illustrative photography — the card beside it carries the
               meaning, so the image itself gets an empty alt. */}
           <div className="animate-rise group relative mx-auto w-full max-w-md lg:max-w-none">
-            <div className="hairline relative overflow-hidden rounded-4xl bg-fg/5">
+            {/* <div className="hairline relative overflow-hidden rounded-4xl bg-fg/5"> */}
+            <div className=" relative overflow-hidden rounded-4xl">
               <Image
-                src={unsplash(photos.support, 900, 760)}
+                // src={unsplash(photos.support, 900, 760)}
+                src="/tech_support-removebg-preview.png"
                 alt=""
                 width={450}
                 height={380}
                 priority
-                className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
+                // className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
+                className="aspect-6/5 w-full object-contain transition duration-700 group-hover:scale-105"
               />
               <div
                 aria-hidden
@@ -197,7 +200,7 @@ export default function SupportPage() {
       <Section id="contact" className="pt-0! sm:pt-0!">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="flex flex-col gap-5">
-            <div className="group hairline relative overflow-hidden rounded-3xl bg-fg/5">
+            {/* <div className="group hairline relative overflow-hidden rounded-3xl bg-fg/5">
               <Image
                 src={unsplash(photos.contact, 900, 620)}
                 alt=""
@@ -212,7 +215,7 @@ export default function SupportPage() {
               <p className="absolute inset-x-0 bottom-0 p-6 font-display text-lg font-bold leading-snug text-white sm:text-xl">
                 One inbox, read every morning.
               </p>
-            </div>
+            </div> */}
 
             <h2 className="mt-2 text-balance text-3xl font-extrabold leading-[1.1] text-fg sm:text-4xl">
               Tell us what went wrong

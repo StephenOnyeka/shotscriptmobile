@@ -24,7 +24,7 @@ export function FinalCta() {
 
         <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-7">
           <Image
-            src={screens.badge}
+            src={screens.badgeDark}
             alt=""
             width={64}
             height={64}

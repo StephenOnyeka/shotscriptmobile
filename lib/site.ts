@@ -4,7 +4,8 @@ import campaignScreen from "@/public/images/Free Transparent Samsung Galaxy S26 
 import brandBrainScreen from "@/public/images/Free Transparent Samsung Galaxy S26 Mockup (Mockuuups Studio) (3).png";
 import handMockup from "@/public/images/Free iPhone Hand Mockup (Mockuuups Studio).png";
 import brandBrainAngled from "@/public/images/Realme 10.png";
-import badge from "@/public/Badge - Original (3).png";
+import badge from "@/public/Logo2.png";
+import badgeDark from "@/public/Logo.png";
 import wordmarkGlyph from "@/public/Group 2.png";
 
 export const screens = {
@@ -16,6 +17,7 @@ export const screens = {
   brandBrainAngled,
   hand: handMockup,
   badge,
+  badgeDark,
   glyph: wordmarkGlyph,
 };
 

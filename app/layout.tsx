@@ -43,6 +43,10 @@ export const metadata: Metadata = {
     "social media content app",
     "ShotScript",
   ],
+  icons: {
+    icon: "/Logo2.png",
+    apple: "/Logo2.png",
+  },
   openGraph: {
     title,
     description,
