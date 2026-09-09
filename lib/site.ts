@@ -1,21 +1,27 @@
 import homeScreen from "@/public/images/Free Transparent Samsung Galaxy S26 Mockup (Mockuuups Studio).png";
+import aboutScreen from "@/public/medium-shot-colleagues.png"
+// import aboutScreen from "@/public/medium-shot-colleagues-working-together.jpg"
 import onboardingScreen from "@/public/images/Free Transparent Samsung Galaxy S26 Mockup (Mockuuups Studio) (1).png";
 import campaignScreen from "@/public/images/Free Transparent Samsung Galaxy S26 Mockup (Mockuuups Studio) (2).png";
 import brandBrainScreen from "@/public/images/Free Transparent Samsung Galaxy S26 Mockup (Mockuuups Studio) (3).png";
 import handMockup from "@/public/images/Free iPhone Hand Mockup (Mockuuups Studio).png";
+import handMockup2 from "@/public/Free hand.png";
 import brandBrainAngled from "@/public/images/Realme 10.png";
 import badge from "@/public/Logo2.png";
 import badgeDark from "@/public/Logo.png";
 import wordmarkGlyph from "@/public/Group 2.png";
+import team from "@/public/portrait-overjoyed-women-friends-holding-mobile-phone-shopping-online-with-sales_695242-10022-removebg-preview.png"
 
 export const screens = {
-  home: homeScreen,
+  // home: homeScreen,
+  home: handMockup2,
   onboarding: onboardingScreen,
   campaign: campaignScreen,
   brandBrain: brandBrainScreen,
   /** Angled 3D mockup of the Brand Brain screen — the widest asset we have. */
   brandBrainAngled,
-  hand: handMockup,
+  // about: handMockup,
+  about: team,
   badge,
   badgeDark,
   glyph: wordmarkGlyph,

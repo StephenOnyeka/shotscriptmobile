@@ -24,6 +24,20 @@ export function Features() {
               className="pointer-events-none absolute -right-16 -top-16 size-40 rounded-full bg-brand-500/0 blur-3xl transition-colors duration-500 group-hover:bg-brand-500/25"
             />
 
+            {/* Faded background icon that lights up on hover */}
+            {/* <div
+              aria-hidden
+              className="pointer-events-none absolute -bottom-6 -right-6 text-fg/5 opacity-25 transition-all duration-500 group-hover:-translate-y-2.5 group-hover:scale-105 group-hover:text-accent/30 group-hover:opacity-100"
+            >
+              <Icon size={145} color="currentColor" variant="Bulk" />
+            </div> */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -bottom-6 -right-6 text-fg/5 opacity-25 transition-all duration-500 group-hover:-translate-y-2.5 group-hover:scale-105 group-hover:text-accent/30 group-hover:opacity-100"
+            >
+              <Icon size={145} color="currentColor" variant="Bulk" />
+            </div>
+
             <span className="relative grid size-12 place-items-center rounded-2xl bg-linear-to-b from-brand-400/25 to-brand-600/15 text-accent ring-1 ring-inset ring-fg/10">
               <Icon size={24} color="currentColor" variant="Bulk" />
             </span>

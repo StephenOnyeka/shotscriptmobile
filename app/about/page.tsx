@@ -97,18 +97,32 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
+          {/* <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
             <div
               aria-hidden
               className="absolute left-1/2 top-1/2 size-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500/25 blur-[100px]"
             />
             <Image
-              src={screens.hand}
+              src={screens.about}
               alt="A hand holding a phone showing the ShotScript brand onboarding screen, asking for a brand name and ideal customer"
               sizes="(min-width: 1024px) 28rem, 88vw"
               placeholder="blur"
               className="relative h-auto w-full drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)] light:drop-shadow-[0_36px_70px_rgba(21,17,31,0.18)]"
             />
+          </div> */}
+          <div className="animate-rise mx-auto w-full max-w-md gap-4 lg:max-w-none">
+            <div className=" relative overflow-hidden rounded-0">
+                          <Image
+                            src={screens.about}
+                            // src="/social-media-marketing-concept-marketing-with-applications.jpg"
+                            alt=""
+                            width={450}
+                            height={380}
+                            priority
+                            // className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
+                            className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
+                          />
+                        </div>
           </div>
         </div>
       </div>
@@ -154,17 +168,20 @@ export default function AboutPage() {
             </div>
           </div> */}
           <div className="animate-rise mx-auto w-full max-w-md gap-4 lg:max-w-none">
-            <div className=" relative overflow-hidden rounded-4xl">
+            <div className="bg-[#b892fb] pt-16 px-8 w-[500] h-auto relative overflow-hidden rounded-4xl">
                           <Image
                             // src={unsplash(photos.support, 900, 760)}
                             // src="/social-media-marketing-concept-marketing-with-applications.jpg"
-                            src="/portrait-overjoyed-women-friends-holding-mobile-phone-shopping-online-with-sales_695242-10022-removebg-preview.png"
+                            // src="/portrait-overjoyed-women-friends-holding-mobile-phone-shopping-online-with-sales_695242-10022-removebg-preview.png"
+                            src="/images/Free Transparent Samsung Galaxy S26 Mockup (Mockuuups Studio).png"
                             alt=""
-                            width={450}
-                            height={380}
+                            // width={450}
+                            // height={380}
+                            width={350}
+                            height={280}
                             priority
                             // className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
-                            className="aspect-6/5 w-full object-cover transition duration-700 group-hover:scale-105"
+                            className="aspect-6/5 w-full object-cover object-top transition duration-700 group-hover:scale-105"
                           />
                           <div
                             aria-hidden

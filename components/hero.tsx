@@ -31,7 +31,7 @@ export function Hero() {
 
           <StoreButtons className="pt-1" />
 
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-4 pt-2">
+          {/* <div className="flex flex-wrap items-center gap-x-6 gap-y-4 pt-2">
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2.5">
                 {heroFaces.map((face) => (
@@ -63,7 +63,7 @@ export function Hero() {
             <p className="text-sm text-fg/45">
               Free plan forever · No credit card
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
@@ -75,10 +75,11 @@ export function Hero() {
           <Image
             src={screens.home}
             alt="The ShotScript home screen on a phone, showing the New Campaign button, Brand Brain progress and campaign stats"
-            sizes="(min-width: 1024px) 26rem, (min-width: 640px) 24rem, 88vw"
+            // sizes="(min-width: 1024px) 26rem, (min-width: 640px) 24rem, 88vw"
             priority
             placeholder="blur"
-            className="relative mx-auto h-auto w-full max-w-[22rem] drop-shadow-[0_40px_80px_rgba(0,0,0,0.65)] light:drop-shadow-[0_40px_80px_rgba(21,17,31,0.2)] lg:animate-float"
+            // className="relative mx-auto h-auto w-full max-w-[22rem] drop-shadow-[0_40px_80px_rgba(0,0,0,0.65)] light:drop-shadow-[0_40px_80px_rgba(21,17,31,0.2)] lg:animate-float"
+            className="relative mx-auto h-auto w-full max-w-[42rem] drop-shadow-[0_40px_80px_rgba(0,0,0,0.65)] light:drop-shadow-[0_40px_80px_rgba(21,17,31,0.2)] lg:animate-float"
           />
 
           <div className="surface absolute -left-2 top-24 hidden rounded-2xl px-4 py-3 backdrop-blur-md sm:block lg:-left-10">

@@ -17,13 +17,15 @@ export function HowItWorks() {
       <div className="relative mt-16">
         <div
           aria-hidden
-          className="absolute left-0 right-0 top-9 hidden h-px bg-linear-to-r from-transparent via-brand-400/35 to-transparent lg:block"
+          // className="absolute left-0 right-0 top-9 hidden h-px bg-linear-to-r from-transparent via-brand-400/35 to-transparent lg:block"
+          // className="absolute left-0 right-0 top-9 hidden h-px bg-linear-to-r from-transparent via-brand-400/35 to-transparent lg:block"
         />
 
         <ol className="grid gap-6 lg:grid-cols-3 lg:gap-8">
           {steps.map((step) => (
             <li
               key={step.number}
+              // className="surface relative flex flex-col gap-4 rounded-3xl p-7"
               className="surface relative flex flex-col gap-4 rounded-3xl p-7"
             >
               <div className="flex items-center gap-4">

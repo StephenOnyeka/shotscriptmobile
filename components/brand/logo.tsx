@@ -14,7 +14,8 @@ export function Logo({
 }) {
   const badge = size === "lg" ? 44 : size === "md" ? 36 : 30;
   const word =
-    size === "lg" ? "text-3xl" : size === "md" ? "text-[1.35rem]" : "text-lg";
+    // size === "lg" ? "text-3xl" : size === "md" ? "text-[1.35rem]" : "text-lg";
+    size === "lg" ? "text-4xl" : size === "md" ? "text-[1.50rem]" : "text-2xl";
 
   return (
     <span className="inline-flex items-center gap-2.5">
@@ -36,7 +37,7 @@ export function Logo({
       /> */}
       <span className="flex flex-col leading-none">
         <span
-          className={`font-display font-medium tracking-[-0.03em] text-fg ${word}`}
+          className={`font-display font-semibold tracking-[-0.03em] text-fg ${word}`}
         >
           ShotScript
         </span>

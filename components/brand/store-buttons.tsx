@@ -31,14 +31,15 @@ export function PlayStoreButton({ className = "" }: { className?: string }) {
   return (
     <a
       href={PLAY_STORE_URL}
-      className={`${shell} bg-linear-to-b from-brand-400 to-brand-600 text-white shadow-[0_18px_40px_-18px_rgba(123,58,236,0.95)] hover:from-brand-300 hover:to-brand-500 hover:shadow-[0_22px_50px_-18px_rgba(123,58,236,1)] ${className}`}
+      // className={`${shell} bg-linear-to-b from-brand-400 to-brand-600 text-white shadow-[0_18px_40px_-18px_rgba(123,58,236,0.95)] hover:from-brand-300 hover:to-brand-500 hover:shadow-[0_22px_50px_-18px_rgba(123,58,236,1)] ${className}`}
+      className={`${shell} bg-black text-white shadow-[0_18px_40px_-18px_rgba(123,58,236,0.95)] hover:from-brand-300 hover:to-brand-500 hover:shadow-[0_22px_50px_-18px_rgba(123,58,236,1)] ${className}`}
     >
       <PlayGlyph className="size-6 shrink-0" />
       <span className="flex flex-col text-left leading-tight">
         <span className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-white/75">
           Get it on
         </span>
-        <span className="font-display text-base font-bold">Google Play</span>
+        <span className="font-display text-base font-medium">Google Play</span>
       </span>
     </a>
   );
@@ -56,7 +57,7 @@ export function AppStoreButton({ className = "" }: { className?: string }) {
         <span className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-fg/55">
           Download on the
         </span>
-        <span className="font-display text-base font-bold">App Store</span>
+        <span className="font-display text-base font-medium">App Store</span>
       </span>
     </a>
   );

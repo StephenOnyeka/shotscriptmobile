@@ -16,8 +16,9 @@ export default function Home() {
       <Hero />
       <PlatformStrip />
       <Features />
-      <HowItWorks />
       <BrandBrain />
+      <HowItWorks />
+      
       <Showcase />
       <Stats />
       <Testimonials />
